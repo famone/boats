@@ -1,0 +1,130 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+.order{
+	background-color: #B7934D;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+	padding: 14px 26px;
+	border-radius: 50px;
+	border: 1px #B7934D solid;
+	transition: all .3s ease;
+}
+.order:hover{
+	background-color: transparent;
+	border:1px #fff solid;
+}
+
+h2{
+	font-size: 40px;
+	color: #000;
+	margin-top: 0;
+	font-weight: 700;
+	margin-bottom: 40px;
+	font-family: 'Playfair Display', serif;
+}
+.grey-txt{
+	font-size: 18px;
+	line-height: 24px;
+	color: #999;
+	font-weight: 400;
+}
+
+
+.order2{
+	background-color: #B7934D;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 600;
+	padding: 14px 58px;
+	border-radius: 50px;
+	border: 1px #B7934D solid;
+	margin-top: 30px;
+	transition: all .3s ease;
+}
+.order2:hover{
+	background-color: transparent;
+	border:1px #000 solid;
+	color: #B7934D;
+}
+
+h4{
+	font-family: 'Playfair Display', serif;
+	font-size: 30px;
+	font-weight: 700;
+	color: #000;
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+/*ADAPTIIIIIIIIIV*/
+
+
+@media (max-width: 1199px) {
+	
+}
+@media (max-width: 991px) {
+	
+}
+@media (max-width: 786px) {
+
+}
+@media (max-width: 767px) {
+ 	.ostanovki{
+ 		width: 100%!important;
+ 	}
+ 	.ostanovki:before{
+ 		bottom: -9px!important;
+ 	}
+ 	.ostanovki p{
+ 		font-size: 13px!important;
+ 	}
+}
+@media (max-width: 672px) {
+	
+}
+@media (max-width: 512px) {
+	.info .order2{
+		width: 100%;
+		margin-top: 20px!important;
+	}
+}
+@media (max-width: 390px) {
+	
+}
+@media (max-width: 320px) {
+
+}
+
+
+
+
+
+/* Remove outline on the forms and links */ 
+:active, :hover, :focus { 
+outline: 0; 
+outline-offset: 0; 
+}
+
+button:active, button:hover, button:focus { 
+outline: 0; 
+outline-offset: 0; 
+}
+
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+a:focus{
+	text-decoration: none;
+}
