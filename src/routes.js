@@ -9,6 +9,7 @@ import About from './pages/About.vue'
 import Singletour from './pages/Singletour.vue'
 import Cert from './pages/Cert.vue'
 import Events from './pages/Even.vue'
+import Singleevent from './pages/Singleevent.vue'
 
 
 export default new VueRouter({
@@ -40,6 +41,10 @@ export default new VueRouter({
 		{
 			path: '/events',
 			component: Events
+		},
+		{
+			path: '/events/:id',
+			component: Singleevent
 		},
 		{
 			path: '/about',

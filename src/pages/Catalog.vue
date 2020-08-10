@@ -3,7 +3,7 @@
 		<section id="inner">
 			<div class="container">
 				<div class="col-lg-12">
-					<h1>Каталог</h1>
+					<h1>Катера</h1>
 				</div>
 			</div>
 		</section>

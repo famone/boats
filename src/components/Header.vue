@@ -8,7 +8,7 @@
 				<nav class="hidden-xs hidden-sm">
 					<ul>
 						<li><router-link tag="a" to="/about">О Generalboats</router-link</li>
-						<li><router-link tag="a" to="/catalog">Каталог</router-link></li>
+						<li><router-link tag="a" to="/catalog">Катера</router-link></li>
 						<li><router-link tag="a" to="/tours">Туры</router-link></li>
 						<li><router-link tag="a" to="/events">Мероприятия</router-link></li>
 						<li><router-link tag="a" to="/faq">FAQ</router-link></li>
@@ -27,13 +27,13 @@
 			<div class="cross" @click="activeMenu = !activeMenu">✕</div>
 			<div>
 				<ul @click="activeMenu = !activeMenu">
-					<li><a href="">О Generalboats </a></li>
-					<li><a href="">Каталог</a></li>
-					<li><a href="">Туры</a></li>
-					<li><a href="">Мероприятия</a></li>
-					<li><a href="">FAQ</a></li>
-					<li><a href="">Cертификаты </a></li>
-					<li><a href="">Контакты</a></li>
+					<li><router-link tag="a" to="/about">О Generalboats</router-link</li>
+					<li><router-link tag="a" to="/catalog">Катера</router-link></li>
+					<li><router-link tag="a" to="/tours">Туры</router-link></li>
+					<li><router-link tag="a" to="/events">Мероприятия</router-link></li>
+					<li><router-link tag="a" to="/faq">FAQ</router-link></li>
+					<li><router-link tag="a" to="/cert">Cертификаты</router-link></li>
+					<li><router-link tag="a" to="/contacts">Контакты</router-link></li>
 				</ul>
 				<br>
 				<button class="order">+7 999 222-21-21</button>

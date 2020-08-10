@@ -39,7 +39,7 @@
 			</div>
 			<div class="price-box">
 				<p>{{boat.acf.stoimost}} ₽/час</p>
-				<button class="order2" @click="showPop()">Арендовать</button>
+				<button class="order2" @click="showPop(boat.title.rendered)">Арендовать</button>
 			</div>
 		</div>
 	</div>
@@ -90,8 +90,8 @@ import {mapState} from 'vuex'
 				this.filterBtns[index].active = true
 				this.filterdParam = this.filterBtns[index].name
 			},
-			showPop(){
-				alert('asfasf')
+			showPop(name){ 
+				this.$store.dispatch('goods/showPop', name)
 			}
 		}
 	}

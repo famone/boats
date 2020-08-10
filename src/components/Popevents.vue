@@ -1,8 +1,8 @@
 <template>
 	<div class="pop">
 		<div class="pop-box" >
-			<div class="cross" @click="disablePop()">✕</div>
-				<h4 class="text-center">Арендовать яхту</h4>
+			<div class="cross" @click="disableEvents()">✕</div> 
+				<h4 class="text-center">Заказать мероприятие</h4>
 				<form action="">
 					<div class="col-lg-6">
 						<input type="text" placeholder="Имя">
@@ -17,7 +17,7 @@
 						<input type="number" placeholder="Кол-во человек">
 					</div>
 					<div class="col-lg-4">
-						<input type="text" placeholder="" :value="yachtName">
+						<input type="text" placeholder="" :value="eventName">
 					</div>
 					<div class="col-lg-12">
 						<input type="submit">
@@ -32,11 +32,11 @@ import {mapState} from 'vuex'
 
 	export default{
 		computed: {
-			...mapState('goods', ['yachtName']),
+			...mapState('goods', ['eventName']),
 		},
 		methods: {
-			disablePop(){
-				this.$store.dispatch('goods/disablePop')
+			disableEvents(){
+				this.$store.dispatch('goods/disableEvents')
 			}
 		}
 	}

@@ -8,19 +8,22 @@
 			</div>
 		</section>
 
+
 		<section id="events">
 			<div class="container">
-				<div class="col-lg-4" v-for="mer in meropri">
-					<div class="event" :style="{'background-image': 'url(' + mer.img + ')'}">
-						<h4>{{mer.name}}</h4>
+				<div class="col-lg-4" v-for="mer in eventsList">
+					<div class="event" :style="{'background-image': 'url(' + mer.acf.fonovoe_izobrazhenie + ')'}">
+						<h4>{{mer.title.rendered}}</h4>
 						<div class="info">
 								<div class="time">
-									<p>{{mer.time}}</p>
+									<p>{{mer.acf.vremya}}</p>
 								</div>
 								<div class="price">
-									<p>{{mer.price}} руб</p>
+									<p>{{mer.acf.stoimost}} руб</p>
 								</div>
-								<button class="order2">Подробнее</button>
+								<router-link tag="a" :to="'/events/' + mer.slug">
+									<button class="order2">Подробнее</button>
+								</router-link>
 							</div>
 					</div>
 				</div>
@@ -30,48 +33,10 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 	export default{
-		data(){
-			return{
-				meropri: [
-					{
-						name: 'День Рождения',
-						price: 5000,
-						time: '4 часа',
-						img: require('../assets/img/bday.jpg')
-					},
-					{
-						name: 'День Рождения',
-						price: 5000,
-						time: '4 часа',
-						img: require('../assets/img/bday.jpg')
-					},
-					{
-						name: 'День Рождения',
-						price: 5000,
-						time: '4 часа',
-						img: require('../assets/img/bday.jpg')
-					},
-					{
-						name: 'День Рождения',
-						price: 5000,
-						time: '4 часа',
-						img: require('../assets/img/bday.jpg')
-					},
-					{
-						name: 'День Рождения',
-						price: 5000,
-						time: '4 часа',
-						img: require('../assets/img/bday.jpg')
-					},
-					{
-						name: 'День Рождения',
-						price: 5000,
-						time: '4 часа',
-						img: require('../assets/img/bday.jpg')
-					}
-				]
-			}
+		computed: {
+			...mapState('goods', ['eventsList']),
 		}
 	}	
 </script>
@@ -96,24 +61,38 @@
 	padding:150px 20px 20px 40px;
 	margin-bottom: 30px;
 	transition: all .3s ease;
+	position: relative;
+}
+.event:before{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	content: '';
+	background-color: rgba(0,0,0,.4);
+	top: 0;
+	left: 0;
+	z-index: 0;
 }
 .event:hover{
 	transform: scale(1.04);
 }
 .event h4{
 	color: #fff;
+	position: relative;
 }
 .time{
 	display: flex;
 	justify-content: left;
 	align-items: center;
 	margin-bottom: 10px;
+	position: relative;
 }
 .price{
 	display: flex;
 	justify-content: left;
 	align-items: center;
 	margin-bottom: 10px;
+	position: relative;
 }
 .info p{
 	font-size: 22px;
@@ -124,6 +103,7 @@
 .info .order2{
 	margin-top: 0;
 	width: 100%;
+	position: relative;
 }
 .info .order2:hover{
 	color: #fff;

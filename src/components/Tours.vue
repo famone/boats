@@ -10,10 +10,10 @@
 			<div class="row">
 				<div class="col-lg-6" v-for="tour in tours">
 					<div class="tour-box">
+						<router-link tag="a" :to="'/tours/' + tour.slug">
 							<div class="tour-img" :style="{'background-image': 'url(' + tour.images.large + ')'}"></div>
-							<router-link tag="a" :to="'/tours/' + tour.slug">
+						</router-link>
 								<h4>{{tour.title.rendered}}</h4>
-							</router-link>
 							<p class="grey-txt" v-html="tour.content.rendered"></p>
 							<div class="info">
 								<div class="time">
@@ -24,7 +24,7 @@
 									<img src="../assets/img/price.svg" alt="">
 									<p>{{tour.acf.stoimost}} руб</p>
 								</div>
-								<button class="order2">Заказать тур</button>
+								<button class="order2" @click="showTour(tour.title.rendered)">Заказать тур</button>
 							</div>
 					</div>
 				</div>
@@ -39,6 +39,11 @@ import {mapState} from 'vuex'
 	export default {
 		computed: {
 			...mapState('goods', ['tours']),
+		},
+		methods: {
+			showTour(name){
+				this.$store.dispatch('goods/showTour', name)
+			}
 		}
 	}
 </script>
@@ -58,6 +63,10 @@ import {mapState} from 'vuex'
 	-webkit-background-size: cover;
 	background-size: cover;
 	margin-bottom: 20px;
+	transition: all .3s ease;
+}
+.tour-img:hover{
+	transform: scale(1.04);
 }
 .time{
 	display: flex;

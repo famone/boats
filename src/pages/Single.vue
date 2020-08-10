@@ -6,7 +6,7 @@
 					<h1>{{getBoats(itemSlug).title.rendered}}</h1>
 					<div class="price-box">
 						<p>{{getBoats(itemSlug).acf.stoimost}} ₽/час</p>
-						<button class="order2">Арендовать</button>
+						<button class="order2" @click="showPop(getBoats(itemSlug).title.rendered)">Арендовать</button>
 					</div>
 				</div>
 			</div>
@@ -85,6 +85,11 @@ import Contactus from '../components/Contactus.vue'
 		},
 		created(){
 			this.itemSlug = this.$route.params.id
+		},
+		methods: {
+			showPop(name){ 
+				this.$store.dispatch('goods/showPop', name)
+			}
 		}
 	}
 	
