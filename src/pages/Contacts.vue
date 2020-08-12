@@ -29,6 +29,19 @@
 							<a href="tel:+79992222121">Набережная канала Грибоедова 15-Б</a>
 						</div>
 					</div>
+					<div class="col-lg-6">
+						<div class="cont-box text-center">
+							<h4>Instagram</h4>
+							<a href="https://www.instagram.com/generalboats/">
+								<img src="../assets/img/inst.svg" class="inst">generalboats</a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="cont-box text-center">
+							<h4>Реквизиты для оплаты</h4>
+							<a href="#">123123123123</a>
+						</div>
+					</div>
 				</div>
 
 				<div class="row">
@@ -87,6 +100,9 @@ import Contactus from '../components/Contactus.vue'
 </script>
 
 <style scoped>
+.inst{
+	margin-right: 5px;
+}
 #map{
 	width: 100%;
 	height: 450px;

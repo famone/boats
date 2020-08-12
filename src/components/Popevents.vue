@@ -8,7 +8,7 @@
 						<input type="text" placeholder="Имя">
 					</div>
 					<div class="col-lg-6">
-						<input type="text" placeholder="Телефон">
+						<input type="text" v-mask="'+7 (###) ###-##-##'" placeholder="Телефон">
 					</div>
 					<div class="col-lg-4">
 						<input type="date">

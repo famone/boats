@@ -11,17 +11,19 @@
 			<div class="row form-row">
 				<form action="">
 					<div class="col-lg-4">
-						<input type="text" placeholder="Имя" v-model="emailBody.name">
+						<input type="text" placeholder="Имя" v-model="name" 
+						:class="{errorInp : $v.name.$dirty && !$v.name.required}" >
 					</div>
 					<div class="col-lg-4">
-						<input type="text" placeholder="Телефон" v-mask="'+7 (###) ###-##-##'" v-model="emailBody.tel">
+						<input type="text" placeholder="Телефон" v-mask="'+7 (###) ###-##-##'" v-model="phone" 
+						:class="{errorInp : ($v.phone.$dirty && !$v.phone.required) || ($v.phone.$dirty && !$v.phone.minLength)}">
 					</div>
 					<div class="col-lg-4">
-						<input type="text" placeholder="E-mail" v-model="emailBody.email">
+						<input type="text" placeholder="E-mail" v-model="email">
 					</div>
 					<div class="col-lg-12 text-center">
 						<input type="submit" @click.prevent="submitForm()">
-						<p v-if="errors.message !== '' " :class="{green : errors.status === 'mail_sent'}">{{errors.message}}</p>
+						<p class="error" v-if="errors.message !== '' " :class="{green : errors.status === 'mail_sent'}">{{errors.message}}</p>
 					</div>
 				</form>
 			</div>
@@ -35,27 +37,49 @@
 </template>
 
 <script>
+import { required, email, minLength } from "vuelidate/lib/validators";
 import {mapState} from 'vuex' 
 import axios from 'axios'
+
 
 export default{
 	data(){
 		return{
-			emailBody: {
 				name: '',
-				tel: '',
-				email:''
-			},
-			errors: '',
-			url: 'https://gb.webink.site/wp-json/contact-form-7/v1/contact-forms/24/feedback'
+				phone: '',
+				email:'',
+				errors: '',
+				url: 'https://gb.webink.site/wp-json/contact-form-7/v1/contact-forms/24/feedback'
 		}
 	},
+	validations: {
+			name: {
+				required
+			},
+			phone: {
+				required,
+				minLength: minLength(18)
+			}
+		},
 	methods: {
 		submitForm(){
+			if(this.$v.$invalid) {
+					this.$v.$touch();
+					return;
+			}
+			
+
+			let emailBody = {
+				your_name: this.name,
+				your_phone: this.phone,
+ 				your_email: this.email
+			}
+
+
         	var form2 = new FormData();
         	
-       		for (var field in this.emailBody){
-				form2.append(field, this.emailBody[field]);
+       		for (var field in emailBody){
+				form2.append(field, emailBody[field]);
 			};
 
             axios
@@ -63,13 +87,7 @@ export default{
                 .then((response) => {
                     console.log(response);
                     this.errors = response.data;
-                    if(response.data.status === 'mail_sent'){
-                    	this.emailBody = {
-							your_name: '',
-							your_phone: '',
-							your_email: ''
-						}
-                    }
+                    
                 })
                 .catch((error) => {
                     this.errors = error.response.data
@@ -150,5 +168,13 @@ input[type="submit"]:hover{
 }
 .errorInp{
 	border-bottom: 2px red solid!important;
+}
+.error{
+	color: red;
+	margin-top: 20px;
+}
+.green{
+	color: #07ff07;
+	margin-top: 20px;
 }
 </style>
