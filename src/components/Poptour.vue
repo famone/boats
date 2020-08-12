@@ -5,22 +5,23 @@
 				<h4 class="text-center">Заказать тур</h4>
 				<form action="">
 					<div class="col-lg-6">
-						<input type="text" placeholder="Имя">
+						<input type="text" placeholder="Имя" v-model="emailBody.your_name">
 					</div>
 					<div class="col-lg-6">
-						<input type="text" v-mask="'+7 (###) ###-##-##'" placeholder="Телефон">
+						<input type="text" v-mask="'+7 (###) ###-##-##'" placeholder="Телефон" v-model="emailBody.your_phone">
 					</div>
 					<div class="col-lg-6">
-						<input type="date">
+						<input type="date" v-model="emailBody.your_date">
 					</div>
 					<div class="col-lg-6">
-						<input type="number" placeholder="Кол-во человек">
+						<input type="number" placeholder="Кол-во человек" v-model="emailBody.persons">
 					</div>
 					<div class="col-lg-12">
-						<input type="text" placeholder="" :value="tourName">
+						<input type="text" placeholder="" :value="tourName" disabled="disabled">
 					</div>
 					<div class="col-lg-12">
-						<input type="submit">
+						<input type="submit" @click.prevent="submitForm()">
+						<p class="error text-center" v-if="errors.message !== '' " :class="{green : errors.status === 'mail_sent'}">{{errors.message}}</p>
 					</div>
 				</form>
 		</div>
@@ -29,15 +30,58 @@
 
 <script>
 import {mapState} from 'vuex'
+import axios from 'axios'
 
 	export default{
+		data(){
+			return{
+				emailBody: {
+					your_name: '',
+					your_phone: '',
+					your_date:'',
+					persons: '',
+					your_boat: ''
+				},
+				errors: '',
+				url: 'https://gb.webink.site/wp-json/contact-form-7/v1/contact-forms/68/feedback'
+			}
+		},
 		computed: {
 			...mapState('goods', ['tourName']),
 		},
 		methods: {
 			disableTour(){
 				this.$store.dispatch('goods/disableTour')
-			}
+			},
+			submitForm(){
+
+			this.emailBody.your_boat = this.tourName;
+
+        	var form2 = new FormData();
+        	
+       		for (var field in this.emailBody){
+				form2.append(field, this.emailBody[field]);
+			};
+
+            axios
+            	.post(this.url, form2)
+                .then((response) => {
+                    console.log(response);
+                    this.errors = response.data;
+                    if(response.data.status === 'mail_sent'){
+                    	this.emailBody = {
+							your_name: '',
+							your_phone: '',
+							your_date: '',
+							persons: '',
+							your_boat: ''
+						}
+                    }
+                })
+                .catch((error) => {
+                    this.errors = error.response.data
+                });
+        	}
 		}
 	}
 </script>
