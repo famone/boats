@@ -22,7 +22,7 @@
 
 
 <div class="row">
-	<div class="col-lg-4" v-for="boat in boatsList">
+	<div class="col-lg-4 wow fadeIn" v-for="boat in boatsList" v-if="filterdParam === 'Все' || boat.kater_type.name === filterdParam">
 		<div class="boat-box">
 			<div class="img-box text-center">
 				<img :src="boat.images.large" alt="">
@@ -66,19 +66,19 @@ import {mapState} from 'vuex'
 			return{
 				filterBtns: [
 					{
-						name: 'ВСЕ',
+						name: 'Все',
 						active: true
 					},
 					{
-						name: 'КАТЕРА',
+						name: 'Катера',
 						active: false
 					},
 					{
-						name: 'ЯХТЫ',
+						name: 'Яхты',
 						active: false
 					}
 				],
-				filterdParam: 'ВСЕ'
+				filterdParam: 'Все'
 			}
 		},
 		methods: {
@@ -89,9 +89,13 @@ import {mapState} from 'vuex'
 
 				this.filterBtns[index].active = true
 				this.filterdParam = this.filterBtns[index].name
+				console.log(this.filterdParam)
 			},
 			showPop(name){ 
 				this.$store.dispatch('goods/showPop', name)
+			},
+			showprice(price){
+				console.log(parseInt(price))
 			}
 		}
 	}
@@ -127,6 +131,7 @@ import {mapState} from 'vuex'
 	border-bottom: 2px #dadada solid;
 	background-color: transparent;
 	transition: all .3s ease;
+	text-transform: uppercase;
 }
 .acfilter{
 	border-bottom: 2px #000 solid!important;
@@ -136,6 +141,7 @@ import {mapState} from 'vuex'
 	padding:20px;
 	background: #f7f7f7;
     margin-bottom: 30px;
+    min-height: 581px;
 }
 .img-box{
 	margin-bottom: 20px;
@@ -171,6 +177,8 @@ h3{
 .tth img{
 	margin-right: 8px;
 	transform:translateY(-5px);
+	height: 20px;
+	width: 20px;
 }
 .price-box{
 	display: flex;

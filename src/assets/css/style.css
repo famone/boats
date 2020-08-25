@@ -57,10 +57,24 @@ h4{
 	margin: 0;
 	margin-bottom: 15px;
 }
-
-
-
-
+.goBack{
+	border:none;
+	background-color: transparent;
+	color: #fff;
+	font-size: 18px;
+	font-family: 'Playfair Display', serif;
+	margin-top: 30px;
+}
+.goBack img{
+	height: 15px;
+	transform: rotate(90deg);
+	margin-right: 15px;
+	margin-top: -3px;
+	transition: all .3s ease;
+}
+.goBack:hover img{
+	transform: rotate(90deg) translateY(20px);
+}
 
 
 
@@ -89,6 +103,9 @@ h4{
  	.pop-box{
  		width: 95%!important;
  	}
+ 	input[type="text"]{
+		border-radius: 0!important;
+	}
 }
 @media (max-width: 672px) {
 	

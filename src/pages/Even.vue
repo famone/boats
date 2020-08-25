@@ -29,6 +29,23 @@
 				</div>
 			</div>
 		</section>
+
+			<section id="faq">
+			<div class="container">
+				<div class="col-lg-12">
+					<h2>Это далеко не весь список мероприятий, которые стоит провести на борту водного судна компании «Generalboats». Поводы для аренды катера или яхты могут быть разными:</h2>
+					<p class="grey-txt"
+					>Устройте романтическое свидание на воде<br>
+					Отпразднуйте годовщину свадьбы<br>
+					Проведите детский праздник <br>
+					Организуйте впечатляющую фотосессию <br>
+					Отправьтесь на ночную прогулку под разводными мостами <br>
+					Проведите деловое мероприятия <br>
+					</p>
+				</div>
+			</div>
+		</section>
+		<div class="spacer"></div>
 	</div>
 </template>
 
@@ -108,5 +125,8 @@ import {mapState} from 'vuex'
 .info .order2:hover{
 	color: #fff;
 	border-color: #fff;
+}
+.spacer{
+	padding:30px 0;
 }
 </style>

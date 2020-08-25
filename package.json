@@ -1,6 +1,6 @@
 {
-  "name": "zatochka",
-  "description": "A Vue.js Zatochka WP theme",
+  "name": "generalboats",
+  "description": "A Vue.js generalboats WP theme",
   "version": "0.4.5",
   "author": "Konstantin Timofeev <kt@webink.site>",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "vue-router": "^3.3.4",
     "vue-the-mask": "^0.11.1",
     "vue-yandex-maps": "^0.10.8",
+    "vue2-smooth-scroll": "^1.5.0",
     "vuelidate": "^0.7.5",
     "vuex": "^3.4.0"
   },

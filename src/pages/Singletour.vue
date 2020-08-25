@@ -12,6 +12,7 @@
 					<div class="ostanovki">
 						<p v-for="ostanovka in getTour(itemSlug).acf.marshrut_ostanovok">{{ostanovka.tekst}}</p>
 					</div>
+					<button class="goBack" @click="$router.go(-1)"><img src="../assets/img/arr.svg" alt="">Назад</button>
 				</div>
 			</div>
 		</section>

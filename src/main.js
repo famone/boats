@@ -10,7 +10,6 @@ import Vuelidate from 'vuelidate'
 
 
 
-
 import 'swiper/css/swiper.css'
 
 Vue.use(VueTheMask)
@@ -18,7 +17,6 @@ Vue.use(VueRouter)
 Vue.use(VueAwesomeSwiper)
 Vue.use(Vuelidate)
 Vue.use(require('vue-cookies'))
-
 
 
 

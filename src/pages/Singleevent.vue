@@ -8,9 +8,9 @@
 					<div class="price-box">
 						<p>{{getEvents(itemSlug).acf.stoimost}} руб</p>
 						<p>{{getEvents(itemSlug).acf.vremya}}</p>
-						<button class="order2" @click="showEvents(getEvents(itemSlug).title.rendered)"">Заказать</button>
+						<button class="order2" @click="showEvents(getEvents(itemSlug).title.rendered)">Заказать</button>
 					</div>
-					
+					<button class="goBack" @click="$router.go(-1)"><img src="../assets/img/arr.svg" alt="">Назад</button>
 				</div>
 			</div>
 		</section>
@@ -31,11 +31,8 @@
 	  						<div class="prevBtn" slot="button-prev"></div>
 							<div class="nextBtn" slot="button-next"></div>
 	  					</div>
-				</div>
-				<div class="col-lg-6">
-					<h2>О туре</h2>
-					<p class="grey-txt" v-html="getEvents(itemSlug).content.rendered"></p>
-					<router-link tag="a" to="/cert">
+
+	  					<router-link tag="a" to="/cert">
 						<div class="toAction">
 							<h5>Ищите впечатляющий подарок 
 							на мероприятие? 
@@ -45,6 +42,12 @@
 							<p class="white-txt">Подробнее <img src="../assets/img/arr.svg" alt=""></p>
 						</div>
 					</router-link>
+
+
+				</div>
+				<div class="col-lg-6">
+					<h2>О мероприятии</h2>
+					<p class="grey-txt" v-html="getEvents(itemSlug).content.rendered"></p>
 				</div>
 			</div>
 		</section>

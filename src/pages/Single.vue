@@ -8,6 +8,7 @@
 						<p>{{getBoats(itemSlug).acf.stoimost}} ₽/час</p>
 						<button class="order2" @click="showPop(getBoats(itemSlug).title.rendered)">Арендовать</button>
 					</div>
+					<button class="goBack" @click="$router.go(-1)"><img src="../assets/img/arr.svg" alt="">Назад</button>
 				</div>
 			</div>
 		</section>

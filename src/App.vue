@@ -9,9 +9,7 @@
 
     <transition name="fade" mode="out-in">
         <router-view></router-view>
-      </transition>
-
-  
+      </transition>  
     <appFooter></appFooter>
       
   </div>
@@ -42,7 +40,7 @@ export default {
     this.$store.dispatch('goods/loadTours')
     this.$store.dispatch('goods/loadFaq')
     this.$store.dispatch('goods/loadEvents')
-
+    this.$store.dispatch('goods/crypto')
   }
 }
 </script>

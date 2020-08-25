@@ -56,9 +56,10 @@ const goods = {
 	actions: {
 		loadBoats({commit}){
 	  		axios
-	  			.get('https://gb.webink.site/wp-json/wp/v2/katera/')
+	  			.get('https://gb.webink.site/wp-json/wp/v2/katera?per_page=30')
 	  			.then(response =>{
 	  				commit('SET_BOATS', response.data)
+	  				console.log(response.data)
 	  				
 	  			})
 	  			.catch(error => console.log(error))
@@ -84,7 +85,6 @@ const goods = {
 	  			 .get('https://gb.webink.site/wp-json/wp/v2/meroptiyatiya/')
 	  			 .then(response =>{
 	  			 	commit('SET_EVENTS', response.data)
-	  			 	console.log(response.data)
 	  			 })
 	  			 .catch(error => console.log(error))
 	  	},
@@ -105,6 +105,14 @@ const goods = {
 	  	},
 	  	disableEvents({commit}){
 	  		commit('DISABLE_EVENTS')
+	  	},
+	  	crypto({commit}){
+	  		axios
+	  			.get('https://api.kraken.com/0/public/Ticker')
+	  			.then(response =>{
+	  				console.log(response.data)
+	  			})
+	  			.catch(error => console.log(error))
 	  	}
 	},
 	getters: {

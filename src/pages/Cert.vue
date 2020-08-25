@@ -11,8 +11,10 @@
 		<section id="insider">
 			<div class="container">
 				<div class="col-lg-12">
-					<h2>Преимущества подарочных сертификатов</h2>
-					<div class="grey-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis culpa alias necessitatibus fugit laborum excepturi pariatur quae, amet asperiores nostrum, veritatis autem explicabo quas omnis nesciunt nihil voluptate tempore! Iusto magnam hic id non illo, doloribus distinctio et eos esse, quibusdam laboriosam aperiam quis, inventore earum</div>
+					<h2>Ищите небанальный подарок,</h2>
+					<div class="grey-txt">который не только удивит, но и по-настоящему порадует получателя? Тогда водная прогулка по рекам и каналам Санкт-Петербурга на скоростном катере с опытным капитаном за штурвалом – то, что вам нужно! Катание на водном судне нельзя поставить на полку, зато можно запомнить на долгие годы. Такой подарок подойдет, как и мужчине, так и женщине, как лучшему другу, так и коллеге по работе. 
+					Дарите яркие и искренние эмоции вместе с компанией «Generalboats».
+					</div>
 				</div>
 			</div>
 		</section>
