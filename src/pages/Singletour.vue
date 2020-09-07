@@ -3,19 +3,18 @@
 	<section id="inner" :style="{'background-image': 'url(' + getTour(itemSlug).acf.fonovoe_izobrazhenie + ')'}">
 			<div class="container">
 				<div class="col-lg-12">
+					<button class="goBack" @click="$router.go(-1)"><img src="../assets/img/arr.svg" alt="">Назад</button>
 					<h1>{{getTour(itemSlug).title.rendered}}</h1>
 					<div class="price-box">
-						<p>{{getTour(itemSlug).acf.stoimost}} руб</p>
 						<button class="order2" @click="showTour(getTour(itemSlug).title.rendered)">Заказать</button>
 					</div>
 					<p class="gold-txt">Маршрут остановок:</p>
-					<div class="ostanovki">
+					<div class="ostanovki" :style="{width: getTour(itemSlug).acf.marshrut_ostanovok.length * 10 + '%'}">
 						<p v-for="ostanovka in getTour(itemSlug).acf.marshrut_ostanovok">{{ostanovka.tekst}}</p>
 					</div>
-					<button class="goBack" @click="$router.go(-1)"><img src="../assets/img/arr.svg" alt="">Назад</button>
 				</div>
 			</div>
-		</section>
+		</section> 
 
 		<section id="insider">
 			<div class="container">
@@ -82,6 +81,10 @@ export default{
 			        slidesPerView: 1,
 			      spaceBetween: 0,
 			      draggable: true,
+			      autoplay: {
+			        delay: 1500,
+			        disableOnInteraction: false,
+			      },
 			      pagination: {
 			        el: '.swiper-pagination',
 			        clickable: true
@@ -181,8 +184,8 @@ export default{
 }
 .ostanovki{
 	display: flex;
-	justify-content: space-between;
-	width: 60%;
+	justify-content: flex-start;
+	width: 100%;
 	position: relative;
 }
 .ostanovki:before{
@@ -191,14 +194,16 @@ export default{
 	background-color: #fff;
 	width: 100%;
 	position: absolute;
-	bottom:-6px;
+    top: 37px;
 	left: 0;
 }
 .ostanovki p{
-	font-size: 16px;
+	font-size: 13px;
 	font-weight: 600;
 	color: #fff;
 	position: relative;
+	white-space: nowrap;
+	margin-right: 30px;
 }
 .ostanovki p:before{
 	content: '';
@@ -250,5 +255,33 @@ export default{
 .price-box .order2:hover{
 	color: #fff;
 	border-color: #fff;
+}
+@media (max-width: 767px) {
+	.ostanovki{
+		display: block;
+		margin-left: 25px;
+		width: 100%!important;
+	}
+	.ostanovki:before{
+		display: none;
+	}
+	.ostanovki p{
+		font-size: 18px!important;
+	}
+	.ostanovki p:before{
+		height: 10px;
+    	width: 10px;
+    	left: -20px;
+    	top: 7px;
+	}
+	.ostanovki:after{
+		content: '';
+		position: absolute;
+		height: 100%;
+		left: -22px;
+		top: 0;
+		width: 1px;
+		background-color: #fff;
+	}
 }
 </style>

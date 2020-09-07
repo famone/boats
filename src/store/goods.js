@@ -105,14 +105,6 @@ const goods = {
 	  	},
 	  	disableEvents({commit}){
 	  		commit('DISABLE_EVENTS')
-	  	},
-	  	crypto({commit}){
-	  		axios
-	  			.get('https://api.kraken.com/0/public/Ticker')
-	  			.then(response =>{
-	  				console.log(response.data)
-	  			})
-	  			.catch(error => console.log(error))
 	  	}
 	},
 	getters: {

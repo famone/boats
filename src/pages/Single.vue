@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<section id="inner">
+		<section id="inner" :style="{'background-image': 'url(' + getBoats(itemSlug).acf.fonovoe_izobrazhenie + ')'}">
 			<div class="container">
 				<div class="col-lg-12">
 					<h1>{{getBoats(itemSlug).title.rendered}}</h1>
@@ -66,6 +66,10 @@ import Contactus from '../components/Contactus.vue'
 			        slidesPerView: 1,
 			      spaceBetween: 0,
 			      draggable: true,
+			      autoplay: {
+			        delay: 1500,
+			        disableOnInteraction: false,
+			      },
 			      pagination: {
 			        el: '.swiper-pagination',
 			        clickable: true
@@ -97,6 +101,16 @@ import Contactus from '../components/Contactus.vue'
 </script>
 
 <style scoped>
+#inner:before{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	background-color: rgba(0,0,0,0.4);
+
+}
 .tths{
 	display: flex;
 	justify-content: flex-start;
@@ -107,7 +121,7 @@ import Contactus from '../components/Contactus.vue'
 .tths .box{
 	padding:10px 20px;
 	background-color: #B7934D;
-	width: 30%;
+	width: 45%;
 	height: 98px;
 	margin-right: 15px;
 	margin-bottom: 15px;
@@ -173,6 +187,7 @@ import Contactus from '../components/Contactus.vue'
 	background-position: center;
 	background-image: url(../assets/img/yacht.jpg);
 	padding: 150px 0;
+	position: relative;
 }	
 .price-box{
 	display: flex;
@@ -194,5 +209,10 @@ import Contactus from '../components/Contactus.vue'
 .price-box .order2:hover{
 	color: #fff;
 	border-color: #fff;
+}
+@media (max-width: 512px) {
+	.tths .box{	
+		width: 100%;
+	}
 }
 </style>

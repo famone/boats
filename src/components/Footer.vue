@@ -5,19 +5,22 @@
 				<div class="logo">
 					<img src="../assets/img/logo.svg" alt="">
 				</div>
-				<p class="white-txt">ИНН: 12312312312</p>
-				<p class="white-txt">ОГРН: 12312312312</p> <br>
 			</div>
 			<div class="col-lg-3">
-				<p class="white-txt"><a href="">+7 999 212-12-12</a></p>
-				<p class="white-txt"><a href="">hello@yahtmail.ru</a></p>
-				<p class="white-txt"><a href=""><img src="../assets/img/inst.svg" class="inst">generalboats</a></p>
+				<p class="white-txt"><a href="tel:+79119404444">+7 (911) 940-44-44</a></p>
+				<p class="white-txt"><a href="mailto:hello@generalboats.ru">hello@generalboats.ru</a></p>
 				<br>
+				<div class="social-links" style="margin-bottom: 20px;">
+					<a href="https://www.instagram.com/generalboats/" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111463.svg"></a>
+					<a href="https://wa.me/+79119404444" target="blank_"><img src="https://image.flaticon.com/icons/svg/733/733585.svg"></a>
+					<a href="viber://add?number=79119404444" target="blank_"><img src="https://image.flaticon.com/icons/svg/185/185982.svg"></a>
+					<a href="tg://resolve?domain=@lehastik" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111646.svg"></a>
+				</div>
 			</div>
 			<div class="col-lg-3">
 				<ul>
-					<li><router-link tag="a" to="/about">О Generalboats</router-link</li>
-					<li><router-link tag="a" to="/catalog">Катера</router-link></li>
+					<li><router-link tag="a" to="/about">Generalboats</router-link</li>
+					<li><router-link tag="a" to="/catalog">Каталог</router-link></li>
 					<li><router-link tag="a" to="/tours">Туры</router-link></li>
 					<li><router-link tag="a" to="/events">Мероприятия</router-link></li>
 					<li><router-link tag="a" to="/faq">FAQ</router-link></li>
@@ -26,8 +29,7 @@
 				</ul>
 			</div>
 			<div class="col-lg-3">
-				<p class="white-txt">Санкт-Петербург, Набережная 
-				<br>канала Грибоедова 15-Б</p>
+				<p class="white-txt">Санкт-Петербург, <br>Петровская коса, 9Б</p>
 				<br><br>
 				<div class="webink">
 						<a href="https://webink.site/">coding masters - webink.site</a>
@@ -42,6 +44,14 @@
 </script>
 
 <style scoped>
+.social-links{
+	display: flex;
+	justify-content: flex-start;
+}
+.social-links img{
+	margin-right: 15px;
+	height: 23px;
+}
 footer{
 	background-color: #2F2E2E;
 	padding: 50px 0;

@@ -1,23 +1,29 @@
 <template>
-	<header>
+	<header :class="{fixedHead: fixedHead}">
 		<div class="container">
 			<div class="shapka">
 				<router-link tag="div" to="/"  class="logo">
 					<img src="../assets/img/logo.svg" alt="">
 				</router-link>
 				<nav class="hidden-xs hidden-sm">
-					<ul>
-						<li><router-link tag="a" to="/about">О Generalboats</router-link</li>
-						<li><router-link tag="a" to="/catalog">Катера</router-link></li>
-						<li><router-link tag="a" to="/tours">Туры</router-link></li>
-						<li><router-link tag="a" to="/events">Мероприятия</router-link></li>
-						<li><router-link tag="a" to="/faq">FAQ</router-link></li>
-						<li><router-link tag="a" to="/cert">Cертификаты</router-link></li>
-						<li><router-link tag="a" to="/contacts">Контакты</router-link></li>
-					</ul>
+	<ul>
+		<li><router-link tag="a" to="/about" active-class="aLink" exact>Generalboats</router-link>
+		<li><router-link tag="a" to="/catalog" active-class="aLink">Каталог</router-link></li>
+		<li><router-link tag="a" to="/tours" active-class="aLink">Туры</router-link></li>
+		<li><router-link tag="a" to="/events" active-class="aLink">Мероприятия</router-link></li>
+		<li><router-link tag="a" to="/faq" active-class="aLink">FAQ</router-link></li>
+		<li><router-link tag="a" to="/cert" active-class="aLink">Cертификаты</router-link></li>
+		<li><router-link tag="a" to="/contacts" active-class="aLink">Контакты</router-link></li>
+	</ul>
 				</nav>
-				<a href="tel:+79992222121">
-					<button class="order hidden-xs hidden-sm">+7 999 222-21-21</button>
+				<div class="social-links hidden-xs hidden-sm">
+					<a href="https://www.instagram.com/generalboats/" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111463.svg"></a>
+					<a href="https://wa.me/+79119404444" target="blank_"><img src="https://image.flaticon.com/icons/svg/733/733585.svg"></a>
+					<a href="viber://add?number=79119404444" target="blank_"><img src="https://image.flaticon.com/icons/svg/185/185982.svg"></a>
+					<a href="tg://resolve?domain=@lehastik" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111646.svg"></a>
+				</div>
+				<a href="tel:+79119404444">
+					<button class="order hidden-xs hidden-sm">+7 (911) 940 44 44</button>
 				</a>
 				<button class="order hidden-lg hidden-md" @click="activeMenu = !activeMenu">МЕНЮ</button>
 			</div>
@@ -27,7 +33,7 @@
 			<div class="cross" @click="activeMenu = !activeMenu">✕</div>
 			<div>
 				<ul @click="activeMenu = !activeMenu">
-					<li><router-link tag="a" to="/about">О Generalboats</router-link</li>
+					<li><router-link tag="a" to="/about">Generalboats</router-link</li>
 					<li><router-link tag="a" to="/catalog">Катера</router-link></li>
 					<li><router-link tag="a" to="/tours">Туры</router-link></li>
 					<li><router-link tag="a" to="/events">Мероприятия</router-link></li>
@@ -36,7 +42,15 @@
 					<li><router-link tag="a" to="/contacts">Контакты</router-link></li>
 				</ul>
 				<br>
-				<button class="order">+7 999 222-21-21</button>
+				<a href="tel:+79119404444">
+					<button class="order">+7 (911) 940-44-44</button>
+				</a>
+				<div class="social-links" style="margin-top: 20px;">
+					<a href="https://www.instagram.com/generalboats/" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111463.svg"></a>
+					<a href="https://wa.me/+79119404444" target="blank_"><img src="https://image.flaticon.com/icons/svg/733/733585.svg"></a>
+					<a href="viber://add?number=79119404444" target="blank_"><img src="https://image.flaticon.com/icons/svg/185/185982.svg"></a>
+					<a href="tg://resolve?domain=@lehastik" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111646.svg"></a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -48,6 +62,7 @@
 
 <script>
 	export default{
+		props: ['fixedHead'],
 		data(){
 			return{
 				activeMenu: false
@@ -57,6 +72,14 @@
 </script>
 
 <style scoped>
+.social-links{
+	display: flex;
+	justify-content: flex-start;
+}
+.social-links img{
+	margin-right: 15px;
+	height: 23px;
+}
 header{
 	position: absolute;
 	width: 100%;
@@ -64,6 +87,11 @@ header{
 	left: 0;
 	padding:20px 0;
 	z-index: 20;
+	transition: all .2s ease;
+}
+.fixedHead{
+	background-color: rgba(0,0,0,.6);
+	position: fixed;
 }
 .shapka{
 	display: flex;
@@ -77,15 +105,20 @@ header{
 .shapka li{
 	list-style: none;
 	display: inline-block;
-	margin-right: 35px;
+	margin-right: 10px;
 }
 .shapka li a{
 	font-size: 14px;
 	color: #fff;
 	transition: all .3s ease;
+	padding: 5px 10px;
+	border-radius: 50px;
 }
 .shapka li a:hover{
 	color: #B7934D;
+}
+.aLink{
+	color: #B7934D!important;
 }
 .logo img{
 	height: 50px;
@@ -104,6 +137,7 @@ header{
 	align-items: center;
 	flex-wrap: wrap;
 	transition: all .3s ease;
+	backdrop-filter: saturate(180%) blur(5px);
 }
 .mobileAc{
 	left: 0;

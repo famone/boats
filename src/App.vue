@@ -5,7 +5,7 @@
 <appPoptour v-if="popUpTour"></appPoptour>
 <appPopevents v-if="popUpEvents"></appPopevents>
 
-    <appHeader></appHeader>
+    <appHeader :fixedHead="fixedHead"></appHeader>
 
     <transition name="fade" mode="out-in">
         <router-view></router-view>
@@ -35,12 +35,29 @@ export default {
   computed: {
     ...mapState('goods', ['popUpRent', 'popUpTour', 'popUpEvents']),
   },
+  data(){
+    return{
+      fixedHead: false
+    }
+  },
   created(){
   	this.$store.dispatch('goods/loadBoats')
     this.$store.dispatch('goods/loadTours')
     this.$store.dispatch('goods/loadFaq')
     this.$store.dispatch('goods/loadEvents')
-    this.$store.dispatch('goods/crypto')
+
+
+    console.log(this.fixedHead)
+
+    window.addEventListener('scroll', ()=>{
+
+      if(document.documentElement.scrollTop > 450){
+          this.fixedHead = true
+      }else{
+        this.fixedHead = false
+      }
+    })
+    
   }
 }
 </script>

@@ -64,6 +64,7 @@ h4{
 	font-size: 18px;
 	font-family: 'Playfair Display', serif;
 	margin-top: 30px;
+	margin-bottom: 20px;
 }
 .goBack img{
 	height: 15px;
@@ -76,7 +77,32 @@ h4{
 	transform: rotate(90deg) translateY(20px);
 }
 
-
+#insider ul{
+	margin: 0;
+	padding:0;
+	margin-bottom: 20px;
+}
+#insider ul li{
+	list-style: none;
+}
+#insider ul li::before {
+  content: "\2022";
+  color: #B7934D;
+  font-weight: bold;
+  display: inline-block; 
+  width: 10px;
+  margin-right: 10px;
+  font-size: 25px;
+}
+.goldbox{
+	background: #b7924d;
+    padding: 10px;
+    color: #fff!important;
+}
+.white-txt{
+	color: #fff;
+	font-size: 16px;
+}
 
 /*ADAPTIIIIIIIIIV*/
 
@@ -117,6 +143,9 @@ h4{
 	}
 	h1{
 		font-size: 35px!important;
+	}
+	.white-txt{
+		font-size: 13px;
 	}
 }
 @media (max-width: 390px) {

@@ -8,7 +8,7 @@
 			</div>
 		</section>
 
-		<appTours></appTours>
+		<appTours :hidenTitle="hidenTitle"></appTours>
 		<appContactus></appContactus>
 	</div>
 </template>
@@ -18,6 +18,11 @@ import Tours from '../components/Tours.vue'
 import Contactus from '../components/Contactus.vue'
 
 export default{
+		data(){
+			return{
+				hidenTitle: false
+			}
+		},
 		components: {
 			'appTours': Tours,
 			'appContactus': Contactus

@@ -48,6 +48,7 @@
 				<div class="col-lg-6">
 					<h2>О мероприятии</h2>
 					<p class="grey-txt" v-html="getEvents(itemSlug).content.rendered"></p>
+					<button class="order2" @click="showEvents(getEvents(itemSlug).title.rendered)">Заказать</button>
 				</div>
 			</div>
 		</section>
@@ -68,6 +69,10 @@ export default{
 			        slidesPerView: 1,
 			      spaceBetween: 0,
 			      draggable: true,
+			      autoplay: {
+			        delay: 1500,
+			        disableOnInteraction: false,
+			      },
 			      pagination: {
 			        el: '.swiper-pagination',
 			        clickable: true

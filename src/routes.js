@@ -10,6 +10,7 @@ import Singletour from './pages/Singletour.vue'
 import Cert from './pages/Cert.vue'
 import Events from './pages/Even.vue'
 import Singleevent from './pages/Singleevent.vue'
+import NotFound from './pages/NotFound.vue'
 
 
 export default new VueRouter({
@@ -57,6 +58,10 @@ export default new VueRouter({
 		{
 			path: '/catalog/:id',
 			component: Single
+		},
+		{
+			path: '*',
+			component: NotFound
 		}
 	],
 	mode: 'history',

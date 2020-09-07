@@ -1,11 +1,7 @@
 <template>
 	<section id="kater">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h2>Наши катера</h2>
-				</div>
-			</div>
+			
 
 			<div class="row">
 				<div class="col-lg-10 col-lg-offset-1">
@@ -25,12 +21,14 @@
 	<div class="col-lg-4 wow fadeIn" v-for="boat in boatsList" v-if="filterdParam === 'Все' || boat.kater_type.name === filterdParam">
 		<div class="boat-box">
 			<div class="img-box text-center">
-				<img :src="boat.images.large" alt="">
 				<router-link tag="div" :to="'/catalog/' + boat.slug">
+				<img :src="boat.images.large" alt="">
 					<button class="more">Подробнее</button>
 				</router-link>
 			</div>
-			<h3>{{boat.title.rendered}}</h3>
+			<router-link tag="div" :to="'/catalog/' + boat.slug">
+				<h3>{{boat.title.rendered}}</h3>
+			</router-link>
 			<div class="tths">
 				<div class="tth" v-for="item in boat.acf.characteristic">
 					<img :src="item.ikonka" alt="">
@@ -141,20 +139,31 @@ import {mapState} from 'vuex'
 	padding:20px;
 	background: #f7f7f7;
     margin-bottom: 30px;
-    min-height: 581px;
+    /*min-height: 581px;*/
 }
+
 .img-box{
 	margin-bottom: 20px;
+	transition: all .3s ease;
 }
 .img-box img{
 	height: 200px;
 	margin-bottom: 10px;
+	cursor: pointer;
+	position: relative;
+}
+.boat-box:hover .img-box{
+	transform: scale(1.07);
 }
 h3{
 	font-size: 20px;
 	color: #000;
 	font-weight: 500;
 	margin-bottom: 20px;
+	cursor: pointer;
+}
+h3:hover{
+	text-decoration: underline;
 }
 .black-txt{
 	font-size: 16px;
@@ -166,6 +175,7 @@ h3{
 	align-items: center;
 	flex-wrap: wrap;
 	margin-bottom: 20px;
+	min-height: 168px;
 }
 .tth{
 	margin-right: 20px;

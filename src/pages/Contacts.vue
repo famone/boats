@@ -14,7 +14,7 @@
 					<div class="col-lg-4">
 						<div class="cont-box text-center">
 							<h4>Телефон</h4>
-							<a href="tel:+79992222121">+7 999 222-21-21<br><br></a>
+							<a href="tel:+79119404444">+7 (911) 940 44 44<br><br></a>
 						</div>
 					</div>
 					<div class="col-lg-4">
@@ -26,13 +26,13 @@
 					<div class="col-lg-4">
 						<div class="cont-box text-center">
 							<h4>Адрес</h4>
-							<a href="tel:+79992222121">Набережная канала Грибоедова 15-Б</a>
+							<a href="#">Санкт-Петербург, Петровская коса, 9Б</a>
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<div class="cont-box text-center">
 							<h4>Instagram</h4>
-							<a href="https://www.instagram.com/generalboats/">
+							<a href="https://www.instagram.com/generalboats/" target="blank_">
 								<img src="../assets/img/inst.svg" class="inst">generalboats</a>
 						</div>
 					</div>
@@ -68,13 +68,13 @@ import Contactus from '../components/Contactus.vue'
 		methods: {
 			yaMapInit2() { 
 				var myMap2 = new ymaps.Map("map", {
-		            center: [59.936697, 30.326414],
+		            center: [59.963521, 30.245647],
 		            zoom: 14,
 		            controls: []
 
 		        });
 
-		        myMap2.geoObjects.add(new ymaps.Placemark([59.936697, 30.326414], {
+		        myMap2.geoObjects.add(new ymaps.Placemark([59.963521, 30.245647], {
 		            hintContent: 'Собственный значок метки'
 		        }, {
 		            iconLayout: 'default#image',
