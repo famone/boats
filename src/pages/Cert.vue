@@ -18,14 +18,14 @@
 				</div>
 			</div>
 		</section>
-		<section id="insider">
+<!-- 		<section id="insider">
 			<div class="container">
 				<div class="col-lg-12">
 					<h2>Как приобрести подарочный сертификат?</h2>
 					<div class="grey-txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis culpa alias necessitatibus fugit laborum excepturi pariatur quae, amet asperiores nostrum, veritatis autem explicabo quas omnis nesciunt nihil voluptate tempore! Iusto magnam hic id non illo, doloribus distinctio et eos esse, quibusdam laboriosam aperiam quis, inventore earum, mollitia aspernatur odit cupiditate!</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<appCertificates></appCertificates>
 	</div>

@@ -12,6 +12,7 @@
 		<section id="events">
 			<div class="container">
 				<div class="col-lg-4" v-for="mer in eventsList">
+					<router-link tag="a" :to="'/events/' + mer.slug">
 					<div class="event" :style="{'background-image': 'url(' + mer.acf.fonovoe_izobrazhenie + ')'}">
 						<h4>{{mer.title.rendered}}</h4>
 						<div class="info">
@@ -26,6 +27,7 @@
 								</router-link>
 							</div>
 					</div>
+					</router-link>
 				</div>
 			</div>
 		</section>

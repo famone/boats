@@ -34,7 +34,7 @@
 				</div>
 				<div class="col-lg-6">
 					<h2>О туре</h2>
-					<p class="grey-txt" v-html="getTour(itemSlug).content.rendered"></p>
+					<!-- <p class="grey-txt" v-html="getTour(itemSlug).content.rendered"></p> -->
 				</div>
 			</div>
 		</section>

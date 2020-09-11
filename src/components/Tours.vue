@@ -13,8 +13,8 @@
 						<router-link tag="a" :to="'/tours/' + tour.slug">
 							<div class="tour-img" :style="{'background-image': 'url(' + tour.images.large + ')'}">
 								<div class="over-txt">
-									<p class="white-txt" v-html="tour.content.rendered"></p>
-									<button class="more">Подробнее</button>
+									<!-- <p class="white-txt" v-html="tour.content.rendered"></p>
+									<button class="more">Подробнее</button> -->
 								</div>
 							</div>
 						</router-link>
