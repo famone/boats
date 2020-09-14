@@ -7,9 +7,9 @@
 
     <appHeader :fixedHead="fixedHead"></appHeader>
 
-    <transition name="fade" mode="out-in">
+  
         <router-view></router-view>
-      </transition>  
+    
     <appFooter></appFooter>
       
   </div>
