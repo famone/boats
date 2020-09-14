@@ -18,7 +18,7 @@
 
 
 <div class="row">
-	<div class="col-lg-4 wow fadeIn" v-for="boat in boatsList" v-if="filterdParam === 'Все' || boat.kater_type.name === filterdParam">
+	<div class="col-lg-4" v-for="boat in boatsList" v-if="filterdParam === 'Все' || boat.kater_type.name === filterdParam">
 		<div class="boat-box">
 			<div class="img-box text-center">
 				<router-link tag="div" :to="'/catalog/' + boat.slug">
