@@ -60,6 +60,10 @@ export default new VueRouter({
 			component: Single
 		},
 		{
+			path: '/katera/:id',
+			component: Single
+		},
+		{
 			path: '*',
 			component: NotFound
 		}
