@@ -56,7 +56,7 @@ const goods = {
 	actions: {
 		loadBoats({commit}){
 	  		axios
-	  			.get('https://gb.webink.site/wp-json/wp/v2/katera?per_page=30')
+	  			.get('https://generalboats.ru//wp-json/wp/v2/katera?per_page=30')
 	  			.then(response =>{
 	  				commit('SET_BOATS', response.data)
 	  				console.log(response.data)
@@ -66,7 +66,7 @@ const goods = {
 	  	},
 	  	loadTours({commit}){
 	  		axios
-	  			 .get('https://gb.webink.site/wp-json/wp/v2/turi/')
+	  			 .get('https://generalboats.ru//wp-json/wp/v2/turi/')
 	  			 .then(response =>{
 	  			 	commit('SET_TOURS', response.data)
 	  			 })
@@ -74,7 +74,7 @@ const goods = {
 	  	},
 	  	loadFaq({commit}){
 	  		axios
-	  			 .get('https://gb.webink.site/wp-json/wp/v2/faq/')
+	  			 .get('https://generalboats.ru//wp-json/wp/v2/faq/')
 	  			 .then(response =>{
 	  			 	commit('SET_FAQ', response.data)
 	  			 })
@@ -82,7 +82,7 @@ const goods = {
 	  	},
 	  	loadEvents({commit}){
 	  		axios
-	  			 .get('https://gb.webink.site/wp-json/wp/v2/meroptiyatiya/')
+	  			 .get('https://generalboats.ru//wp-json/wp/v2/meroptiyatiya/')
 	  			 .then(response =>{
 	  			 	commit('SET_EVENTS', response.data)
 	  			 })
