@@ -49,7 +49,7 @@ export default{
 				phone: '',
 				email:'',
 				errors: '',
-				url: 'https://gb.webink.site/wp-json/contact-form-7/v1/contact-forms/24/feedback'
+				url: '/wp-json/contact-form-7/v1/contact-forms/24/feedback'
 		}
 	},
 	validations: {
