@@ -43,7 +43,7 @@ import axios from 'axios'
 					your_boat: ''
 				},
 				errors: '',
-				url: '/wp-json/contact-form-7/v1/contact-forms/68/feedback'
+				url: 'https://generalboats.ru/wp-json/contact-form-7/v1/contact-forms/68/feedback'
 			}
 		},
 		computed: {

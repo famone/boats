@@ -23,7 +23,9 @@
 
 <appKater></appKater>
 <appTours :hidenTitle="hidenTitle"></appTours>
+<appReviews></appReviews>
 <appCertificates></appCertificates>
+
 
 
 	</div>
@@ -34,6 +36,7 @@ import Start from '../components/Start.vue'
 import Kater from '../components/Kater.vue'
 import Tours from '../components/Tours.vue'
 import Certificates from '../components/Certificates.vue'
+import Reviews from '../components/Reviews.vue'
 
 	export default{
 		data(){
@@ -45,7 +48,8 @@ import Certificates from '../components/Certificates.vue'
 			'appStart': Start,
 			'appKater': Kater,
 			'appTours': Tours,
-			'appCertificates': Certificates
+			'appCertificates': Certificates,
+			'appReviews': Reviews
 		}
 	}
 </script>

@@ -40,7 +40,7 @@ export default{
 				phone: '',
 				email:'',
 				errors: '',
-				url: '/wp-json/contact-form-7/v1/contact-forms/24/feedback'
+				url: 'https://generalboats.ru/wp-json/contact-form-7/v1/contact-forms/24/feedback'
 		}
 	},
 	validations: {

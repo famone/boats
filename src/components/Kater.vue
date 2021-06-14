@@ -200,6 +200,7 @@ h3:hover{
 	color: #000;
 	margin: 0;
 	font-weight: 600;
+	line-height: 25px;
 }
 .price-box .order2{
 	padding:14px 26px;

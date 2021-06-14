@@ -45,6 +45,7 @@ export default {
     this.$store.dispatch('goods/loadTours')
     this.$store.dispatch('goods/loadFaq')
     this.$store.dispatch('goods/loadEvents')
+    this.$store.dispatch('goods/loadReviews')
 
 
     console.log(this.fixedHead)

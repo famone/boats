@@ -13,7 +13,8 @@ const goods = {
 		popUpEvents: false,
 		yachtName: '',
 		tourName: '',
-		eventName: ''
+		eventName: '',
+		reviews: []
   	},
   mutations: {
   	SET_BOATS(state, playload){
@@ -51,12 +52,15 @@ const goods = {
   	DISABLE_EVENTS(state){
   		state.popUpEvents = false
   		state.eventName = ''
-  	}
+  	},
+	SET_REVIEWS(state, playload){
+		state.reviews = playload
+	}
   },
 	actions: {
 		loadBoats({commit}){
 	  		axios
-	  			.get('/wp-json/wp/v2/katera?per_page=30')
+	  			.get('https://generalboats.ru/wp-json/wp/v2/katera?per_page=30')
 	  			.then(response =>{
 	  				commit('SET_BOATS', response.data)
 	  				console.log(response.data)
@@ -66,7 +70,7 @@ const goods = {
 	  	},
 	  	loadTours({commit}){
 	  		axios
-	  			 .get('/wp-json/wp/v2/turi/')
+	  			 .get('https://generalboats.ru/wp-json/wp/v2/turi/')
 	  			 .then(response =>{
 	  			 	commit('SET_TOURS', response.data)
 	  			 })
@@ -74,7 +78,7 @@ const goods = {
 	  	},
 	  	loadFaq({commit}){
 	  		axios
-	  			 .get('/wp-json/wp/v2/faq/')
+	  			 .get('https://generalboats.ru/wp-json/wp/v2/faq/')
 	  			 .then(response =>{
 	  			 	commit('SET_FAQ', response.data)
 	  			 })
@@ -82,12 +86,19 @@ const goods = {
 	  	},
 	  	loadEvents({commit}){
 	  		axios
-	  			 .get('/wp-json/wp/v2/meroptiyatiya/')
+	  			 .get('https://generalboats.ru/wp-json/wp/v2/meroptiyatiya/')
 	  			 .then(response =>{
 	  			 	commit('SET_EVENTS', response.data)
 	  			 })
 	  			 .catch(error => console.log(error))
 	  	},
+		loadReviews({commit}){
+			axios
+            .get('https://generalboats.ru/wp-json/gb/v1/get/reviews')
+            .then(res =>{
+                commit('SET_REVIEWS', res.data)
+            })
+		},
 	  	showPop({commit}, playload){
 	  		commit('SET_RENT', playload)
 	  	},
@@ -116,7 +127,10 @@ const goods = {
   		},
   		getEvents: (state) => (slug) => {
   			return state.eventsList.find(eventItem => eventItem.slug == slug)
-  		}
+  		},
+		getReviews(state){
+			return state.reviews
+		}
 	}
 }
 
