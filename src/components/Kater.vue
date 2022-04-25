@@ -139,7 +139,7 @@ import {mapState} from 'vuex'
 	padding:20px;
 	background: #f7f7f7;
     margin-bottom: 30px;
-    /*min-height: 581px;*/
+    min-height: 590px;
 }
 
 .img-box{
