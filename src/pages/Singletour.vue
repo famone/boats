@@ -31,15 +31,23 @@
 	  						<div class="prevBtn" slot="button-prev"></div>
 							<div class="nextBtn" slot="button-next"></div>
 	  					</div>
+						  <br>
+						  <h3>Для каких мероприятий подойдет?</h3>
+					<div class="row parties">
+						<div class="col-lg-6 party" v-for="item in getTour(itemSlug).acf.dlya_kakih_turov_podojdyot">
+							<img :src="item.ikonka" alt="">
+							<p >{{item.opisanie}}</p>
+						</div>
+					</div>
 				</div>
 				<div class="col-lg-6">
 					<h2>О туре</h2>
-					<!-- <p class="grey-txt" v-html="getTour(itemSlug).content.rendered"></p> -->
+					<p class="grey-txt" v-html="getTour(itemSlug).content.rendered"></p>
 				</div>
 			</div>
 		</section>
 
-		<section>
+		<!-- <section>
 			<div class="container">
 				<div class="col-lg-12">
 					<h2>Для каких мероприятий подойдет?</h2>
@@ -51,7 +59,7 @@
 					</div>
 				</div>
 			</div>
-		</section id="insider">
+		</section> -->
 
 		<!-- <section id="insider">
 			<div class="container">

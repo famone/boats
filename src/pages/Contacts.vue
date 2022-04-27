@@ -26,7 +26,7 @@
 					<div class="col-lg-4">
 						<div class="cont-box text-center">
 							<h4>Адрес</h4>
-							<a href="#">Санкт-Петербург, Петровская коса, 9Б</a>
+							<a href="#">Санкт-Петербург, Набережная Мартынова 92а</a>
 						</div>
 					</div>
 					<div class="col-lg-6">
@@ -68,13 +68,13 @@ import Contactus from '../components/Contactus.vue'
 		methods: {
 			yaMapInit2() { 
 				var myMap2 = new ymaps.Map("map", {
-		            center: [59.963521, 30.245647],
+		            center: [59.977147, 30.244209],
 		            zoom: 14,
 		            controls: []
 
 		        });
 
-		        myMap2.geoObjects.add(new ymaps.Placemark([59.963521, 30.245647], {
+		        myMap2.geoObjects.add(new ymaps.Placemark([59.977147, 30.244209], {
 		            hintContent: 'Собственный значок метки'
 		        }, {
 		            iconLayout: 'default#image',

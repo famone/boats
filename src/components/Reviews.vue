@@ -110,6 +110,25 @@ import {mapGetters, mapState} from 'vuex'
 			        delay: 1500,
 			            disableOnInteraction: false,
 			        },
+                    breakpoints: {
+			            320: {
+			              slidesPerView: 1.3,
+			              spaceBetween: 10,
+                          freeMode: true,
+                          threshold: 10,
+			              touchRatio: 1,
+                          centeredSlides: true
+			            },
+			            768: {
+				            slidesPerView: 2,
+				            touchRatio: 1,
+				        },
+				        1150: {
+				          slidesPerView: 3,
+				          spaceBetween: 30,
+				           touchRatio: 1,
+				        }
+			        }
 			    }
             }
         }
