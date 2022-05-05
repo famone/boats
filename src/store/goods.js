@@ -19,6 +19,9 @@ const goods = {
   mutations: {
   	SET_BOATS(state, playload){
   		state.boatsList = playload
+		state.boatsList.forEach(item =>{
+			item.acf.gallereya.unshift(item.images.large)
+		})
   	},
   	SET_TOURS(state, playload){
   		state.tours = playload
@@ -63,7 +66,6 @@ const goods = {
 	  			.get('https://generalboats.ru/wp-json/wp/v2/katera?per_page=30')
 	  			.then(response =>{
 	  				commit('SET_BOATS', response.data)
-	  				console.log(response.data)
 	  				
 	  			})
 	  			.catch(error => console.log(error))

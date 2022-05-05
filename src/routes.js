@@ -24,11 +24,11 @@ export default new VueRouter({
 			component: Contacts
 		},
 		{
-			path: '/tours',
+			path: '/turi',
 			component: Tours
 		},
 		{
-			path: '/tours/:id',
+			path: '/turi/:id',
 			component: Singletour
 		},
 		{
