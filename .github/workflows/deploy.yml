@@ -21,7 +21,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: 65.21.235.88
+        server: 65.108.197.195
         port: 21
         protocol: ftp
         username: webink
