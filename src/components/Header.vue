@@ -9,7 +9,7 @@
 	<ul>
 		<li><router-link tag="a" to="/about" active-class="aLink" exact>Generalboats</router-link>
 		<li><router-link tag="a" to="/catalog" active-class="aLink">Каталог</router-link></li>
-		<li><router-link tag="a" to="/tours" active-class="aLink">Туры</router-link></li>
+		<li><router-link tag="a" to="/turi" active-class="aLink">Туры</router-link></li>
 		<li><router-link tag="a" to="/events" active-class="aLink">Мероприятия</router-link></li>
 		<li><router-link tag="a" to="/faq" active-class="aLink">FAQ</router-link></li>
 		<li><router-link tag="a" to="/cert" active-class="aLink">Cертификаты</router-link></li>
@@ -17,12 +17,12 @@
 	</ul>
 				</nav>
 				<div class="social-links hidden-xs hidden-sm">
-					<a href="https://wa.me/+79119404444" target="blank_"><i class="fa-brands fa-whatsapp"></i></a>
-					<a href="viber://add?number=79119404444" target="blank_"><i class="fa-brands fa-viber"></i></a>
-					<a href="tg://resolve?domain=@lehastik" target="blank_"><i class="fa-brands fa-telegram"></i></a>
+					<a href="https://wa.me/79883632220" target="blank_"><i class="fa-brands fa-whatsapp"></i></a>
+					<a href="viber://add?number=79883632220" target="blank_"><i class="fa-brands fa-viber"></i></a>
+					<a href="tg://resolve?domain=@admiral_master" target="blank_"><i class="fa-brands fa-telegram"></i></a>
 				</div>
-				<a href="tel:+79119404444">
-					<button class="order hidden-xs hidden-sm">+7 (911) 940 44 44</button>
+				<a href="tel:+79883632220">
+					<button class="order hidden-xs hidden-sm">+7 988 363-22-20</button>
 				</a>
 				<button class="order hidden-lg hidden-md" @click="activeMenu = !activeMenu">МЕНЮ</button>
 			</div>
@@ -34,21 +34,21 @@
 				<ul @click="activeMenu = !activeMenu">
 					<li><router-link tag="a" to="/about">Generalboats</router-link</li>
 					<li><router-link tag="a" to="/catalog">Катера</router-link></li>
-					<li><router-link tag="a" to="/tours">Туры</router-link></li>
+					<li><router-link tag="a" to="/turi">Туры</router-link></li>
 					<li><router-link tag="a" to="/events">Мероприятия</router-link></li>
 					<li><router-link tag="a" to="/faq">FAQ</router-link></li>
 					<li><router-link tag="a" to="/cert">Cертификаты</router-link></li>
 					<li><router-link tag="a" to="/contacts">Контакты</router-link></li>
 				</ul>
 				<br>
-				<a href="tel:+79119404444">
-					<button class="order">+7 (911) 940-44-44</button>
+				<a href="tel:+79883632220">
+					<button class="order">+7 988 363-22-20</button>
 				</a>
 				<div class="social-links" style="margin-top: 20px;">
 					<a href="https://www.instagram.com/generalboats/" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111463.svg"></a>
-					<a href="https://wa.me/+79119404444" target="blank_"><img src="https://image.flaticon.com/icons/svg/733/733585.svg"></a>
-					<a href="viber://add?number=79119404444" target="blank_"><img src="https://image.flaticon.com/icons/svg/185/185982.svg"></a>
-					<a href="tg://resolve?domain=@lehastik" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111646.svg"></a>
+					<a href="https://wa.me/79883632220" target="blank_"><img src="https://image.flaticon.com/icons/svg/733/733585.svg"></a>
+					<a href="viber://add?number=79883632220" target="blank_"><img src="https://image.flaticon.com/icons/svg/185/185982.svg"></a>
+					<a href="tg://resolve?domain=@admiral_master" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111646.svg"></a>
 				</div>
 			</div>
 		</div>

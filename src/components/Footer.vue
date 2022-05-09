@@ -7,21 +7,21 @@
 				</div>
 			</div>
 			<div class="col-lg-3">
-				<p class="white-txt"><a href="tel:+79119404444">+7 (911) 940-44-44</a></p>
+				<p class="white-txt"><a href="tel:+79883632220">+7 988 363-22-20</a></p>
 				<p class="white-txt"><a href="mailto:hello@generalboats.ru">hello@generalboats.ru</a></p>
 				<br>
 				<div class="social-links" style="margin-bottom: 20px;">
 					<!-- <a href="https://www.instagram.com/generalboats/" target="blank_"><i class="fa-solid fa-user"></i></a> -->
-					<a href="https://wa.me/+79119404444" target="blank_"><i class="fa-brands fa-whatsapp"></i></a>
-					<a href="viber://add?number=79119404444" target="blank_"><i class="fa-brands fa-viber"></i></a>
-					<a href="tg://resolve?domain=@lehastik" target="blank_"><i class="fa-brands fa-telegram"></i></a>
+					<a href="https://wa.me/79883632220" target="blank_"><i class="fa-brands fa-whatsapp"></i></a>
+					<a href="viber://add?number=79883632220" target="blank_"><i class="fa-brands fa-viber"></i></a>
+					<a href="tg://resolve?domain=@admiral_master" target="blank_"><i class="fa-brands fa-telegram"></i></a>
 				</div>
 			</div>
 			<div class="col-lg-3">
 				<ul>
 					<li><router-link tag="a" to="/about">Generalboats</router-link</li>
 					<li><router-link tag="a" to="/catalog">Каталог</router-link></li>
-					<li><router-link tag="a" to="/tours">Туры</router-link></li>
+					<li><router-link tag="a" to="/turi">Туры</router-link></li>
 					<li><router-link tag="a" to="/events">Мероприятия</router-link></li>
 					<li><router-link tag="a" to="/faq">FAQ</router-link></li>
 					<li><router-link tag="a" to="/cert">Cертификаты</router-link></li>

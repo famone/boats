@@ -14,7 +14,7 @@
 					<div class="col-lg-4">
 						<div class="cont-box text-center">
 							<h4>Телефон</h4>
-							<a href="tel:+79119404444">+7 (911) 940 44 44<br><br></a>
+							<a href="tel:++79883632220">+7 988 363-22-20<br><br></a>
 						</div>
 					</div>
 					<div class="col-lg-4">
@@ -29,19 +29,19 @@
 							<a href="#">Санкт-Петербург, Набережная Мартынова 92а</a>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-6 col-lg-offset-3">
 						<div class="cont-box text-center">
-							<h4>Instagram</h4>
+							<h4>Vkontakte</h4>
 							<a href="https://www.instagram.com/generalboats/" target="blank_">
-								<img src="../assets/img/inst.svg" class="inst">generalboats</a>
+								<img src="../assets/img/vklogo.svg" class="inst"></a>
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<!-- <div class="col-lg-6">
 						<div class="cont-box text-center">
 							<h4>Реквизиты для оплаты</h4>
 							<a href="#">123123123123</a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 				<div class="row">
