@@ -5,7 +5,7 @@
 
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2>Телефон: <a href="tel:+79883632220">+7 988 363-22-20</a></h2>
+					<h2>Телефон: <br class="hidden-lg hidden-md"> <a href="tel:+79883632220">+7 988 363-22-20</a></h2>
 				</div>
 				<div class="col-lg-10 col-lg-offset-1">
 					<div class="filters">
@@ -14,7 +14,7 @@
 						@click="toFilter(index)">{{filter.name}}</button>
 					</div>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3">
+				<div class="col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
 					<label for="">Вместимость:</label>
 					<vue-slider v-model="value" :min="1" :max="15" :marks="marks" />
 					<br><br><br>
