@@ -21,34 +21,14 @@
 				</div>
 			</div>
 
-			</div>
-
-
 <!-- катера -->
 
+<!-- filterdParam === 'Все' || boat.kater_type.name === filterdParam && -->
+
 <div class="row">
-	<div class="col-lg-4" v-for="boat in boatsList" v-if="filterdParam === 'Все' || boat.kater_type.name === filterdParam">
-		<div class="boat-box">
-			<div class="img-box text-center">
-				<router-link tag="div" :to="'/catalog/' + boat.slug">
-				<img :src="boat.images.large" alt="">
-					<button class="more">Подробнее</button>
-				</router-link>
-			</div>
-			<router-link tag="div" :to="'/catalog/' + boat.slug">
-				<h3>{{boat.title.rendered}}</h3>
-			</router-link>
-			<div class="tths">
-				<div class="tth" v-for="item in boat.acf.characteristic">
-					<img :src="item.ikonka" alt="">
-					<p class="black-txt">{{item.nazvanie}}</p>
-				</div>
-			</div>
-			<div class="price-box">
-				<p>{{boat.acf.stoimost}} ₽/час</p>
-				<button class="order2" @click="showPop(boat.title.rendered)">Арендовать</button>
-			</div>
-		</div>
+	<div class="col-lg-4" v-for="boat in boatsList" 
+	v-if="checkType(boat.kater_type.name) && boat.count_people >= value[0] && boat.count_people <= value[1]">
+		<KaterCard :boat="boat" />
 	</div>
 </div>
 
@@ -63,14 +43,20 @@
 </template>
 
 <script>
+import VueSlider from 'vue-slider-component'
+import 'vue-slider-component/theme/antd.css'
+import KaterCard from '../components/KaterCard.vue'
 import {mapState} from 'vuex'
 
 	export default {
 		computed: {
 			...mapState('goods', ['boatsList']),
 		},
+		components: {VueSlider, KaterCard},
 		data(){
 			return{
+				value: [1, 15],
+				marks: [1, 5, 10, 15],
 				filterBtns: [
 					{
 						name: 'Все',
@@ -89,6 +75,15 @@ import {mapState} from 'vuex'
 			}
 		},
 		methods: {
+			checkType(type){
+				if(this.filterdParam === 'Все'){
+					return true
+				}else if(this.filterdParam === type){
+					return true
+				}else{
+					return false
+				}
+			},
 			toFilter(index){
 				this.filterBtns.forEach((item)=>{
 					item.active = false;
@@ -145,10 +140,12 @@ import {mapState} from 'vuex'
 	color: #B7934D!important;
 }
 .boat-box{
-	padding:20px;
 	background: #f7f7f7;
     margin-bottom: 30px;
-    /*min-height: 581px;*/
+    min-height: 590px;
+}
+.boat-body{
+	padding: 0 20px 20px 20px;
 }
 
 .img-box{
@@ -160,9 +157,6 @@ import {mapState} from 'vuex'
 	margin-bottom: 10px;
 	cursor: pointer;
 	position: relative;
-}
-.boat-box:hover .img-box{
-	transform: scale(1.07);
 }
 h3{
 	font-size: 20px;
