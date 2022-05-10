@@ -21,8 +21,6 @@
 				</div>
 			</div>
 
-
-
 <!-- катера -->
 
 <!-- filterdParam === 'Все' || boat.kater_type.name === filterdParam && -->
