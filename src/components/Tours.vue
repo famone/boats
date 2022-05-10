@@ -10,7 +10,7 @@
 			<div class="row">
 				<div class="col-lg-6" v-for="tour in tours">
 					<div class="tour-box">
-						<router-link tag="a" :to="'/tours/' + tour.slug">
+						<router-link tag="a" :to="'/turi/' + tour.slug">
 							<div class="tour-img" :style="{'background-image': 'url(' + tour.images.large + ')'}">
 								<div class="over-txt">
 									
@@ -30,7 +30,7 @@
 									<p>{{tour.acf.vremya}}</p>
 								</div>
 								<div class="price">
-									<router-link tag="div" :to="'/tours/' + tour.slug">
+									<router-link tag="div" :to="'/turi/' + tour.slug">
 										<button class="more">Подробнее</button>
 									</router-link>
 								</div>
