@@ -45,10 +45,9 @@
 					<button class="order">+7 988 363-22-20</button>
 				</a>
 				<div class="social-links" style="margin-top: 20px;">
-					<a href="https://www.instagram.com/generalboats/" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111463.svg"></a>
-					<a href="https://wa.me/79883632220" target="blank_"><img src="https://image.flaticon.com/icons/svg/733/733585.svg"></a>
-					<a href="viber://add?number=79883632220" target="blank_"><img src="https://image.flaticon.com/icons/svg/185/185982.svg"></a>
-					<a href="tg://resolve?domain=@admiral_master" target="blank_"><img src="https://image.flaticon.com/icons/svg/2111/2111646.svg"></a>
+					<a href="https://wa.me/79883632220" target="blank_"><i class="fa-brands fa-whatsapp"></i></a>
+					<a href="viber://add?number=79883632220" target="blank_"><i class="fa-brands fa-viber"></i></a>
+					<a href="tg://resolve?domain=@admiral_master" target="blank_"><i class="fa-brands fa-telegram"></i></a>
 				</div>
 			</div>
 		</div>
