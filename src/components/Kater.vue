@@ -28,7 +28,7 @@
 <div class="row">
 	<div class="col-lg-4" v-for="boat in boatsList" 
 	v-if="checkType(boat.kater_type.name) && boat.count_people >= value[0] && boat.count_people <= value[1]">
-		<KaterCard :boat="boat" />
+		<KaterCard :boat="boat" @showPop="showPop($event)" />
 	</div>
 </div>
 

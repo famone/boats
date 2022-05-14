@@ -49,8 +49,10 @@ export default {
             }else{
                 this.activeSlide += param
             }
-            
-        }
+        },
+		showPop(title){
+			this.$emit('showPop', title)
+		}
     },
     data(){
         return{
