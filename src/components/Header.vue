@@ -22,9 +22,11 @@
 					<a href="tg://resolve?domain=@admiral_master" target="blank_"><i class="fa-brands fa-telegram"></i></a>
 				</div>
 				<a href="tel:+79883632220">
-					<button class="order hidden-xs hidden-sm">+7 988 363-22-20</button>
+					<button class="order ">+7 988 363-22-20</button>
 				</a>
-				<button class="order hidden-lg hidden-md" @click="activeMenu = !activeMenu">МЕНЮ</button>
+				<button class="order hidden-lg hidden-md" @click="activeMenu = !activeMenu">
+					<span class="mdi mdi-menu"></span>
+				</button>
 			</div>
 		</div>
 
