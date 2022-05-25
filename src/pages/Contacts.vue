@@ -14,7 +14,7 @@
 					<div class="col-lg-4">
 						<div class="cont-box text-center">
 							<h4>Телефон</h4>
-							<a href="tel:++79883632220">+7 988 363-22-20<br><br></a>
+							<a href="tel:+79119404444">+7 911 940-44-44<br><br></a>
 						</div>
 					</div>
 					<div class="col-lg-4">

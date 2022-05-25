@@ -5,7 +5,7 @@
 
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2>Телефон: <br class="hidden-lg hidden-md"> <a href="tel:+79883632220">+7 988 363-22-20</a></h2>
+					<h2>Телефон: <br class="hidden-lg hidden-md"> <a href="tel:+79119404444">+7 911 940-44-44</a></h2>
 				</div>
 				<div class="col-lg-10 col-lg-offset-1">
 					<div class="filters">
