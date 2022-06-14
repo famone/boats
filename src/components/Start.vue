@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h1>Аренда яхт для 
+					<h1>Аренда катеров для 
 					<br>роскошного отдыха</h1>
 				</div>
 			</div>

@@ -226,6 +226,39 @@ select::-ms-expand {
 }
 
 
+.wh-link{
+	font-size: 16px;
+	font-weight: 500;
+	color: #FFF;
+	transition: all .3s ease;
+}
+.wh-link:hover{
+	color:#b7924d;
+}
+.upper a{
+	text-transform: uppercase;
+}
+.directions{
+	background-color: #fff;
+	padding: 3px 5px;
+	border-radius: 5px;
+	margin-top: 15px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.directions .mdi{
+	font-size: 20px;
+	color:#b7924d;
+	margin-right: 10px;
+}
+.tour-link a{
+	color:#000;
+}
+.tour-link a:hover{
+	color:#b7924d;
+}
+
 /*ADAPTIIIIIIIIIV*/
 
 

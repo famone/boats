@@ -14,10 +14,19 @@
 						@click="toFilter(index)">{{filter.name}}</button>
 					</div>
 				</div>
-				<div class="col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
-					<label for="">Вместимость:</label>
-					<vue-slider v-model="value" :min="1" :max="15" :marks="marks" />
-					<br><br><br>
+				<div class="col-lg-8 col-lg-offset-2 col-xs-offset-2 col-xs-8">
+					<div class="row">
+						<div class="col-lg-6">
+							<label for="">Вместимость:</label>
+							<vue-slider v-model="value" :min="1" :max="15" :marks="marks" />
+							<br><br><br>
+						</div>
+						<div class="col-lg-6">
+							<label for="">Стоимость:</label>
+							<vue-slider v-model="pricing" :interval="1000" :min="5000" :max="25000" :marks="marks2" />
+							<br><br><br>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -27,7 +36,9 @@
 
 <div class="row">
 	<div class="col-lg-4" v-for="boat in boatsList" 
-	v-if="checkType(boat.kater_type.name) && boat.count_people >= value[0] && boat.count_people <= value[1]">
+	v-if="checkType(boat.kater_type.name) && boat.count_people >= value[0] && boat.count_people <= value[1]
+	&& parseInt(boat.acf.stoimost.replace('от ', '')) >= pricing[0] && parseInt(boat.acf.stoimost.replace('от ', '')) <= pricing[1]">
+		<!-- <pre>{{parseInt(boat.acf.stoimost.replace('от ', ''))}}</pre> -->
 		<KaterCard :boat="boat" @showPop="showPop($event)" />
 	</div>
 </div>
@@ -57,6 +68,8 @@ import {mapState} from 'vuex'
 			return{
 				value: [1, 15],
 				marks: [1, 5, 10, 15],
+				pricing: [5000, 25000],
+				marks2: [5000, 10000, 15000, 20000, 25000],
 				filterBtns: [
 					{
 						name: 'Все',

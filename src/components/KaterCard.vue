@@ -15,24 +15,33 @@
 					<button class="more">Подробнее</button>
 				</router-link>
 				<router-link tag="div" :to="'/catalog/' + boat.slug">
-					<h3>{{boat.title.rendered}}</h3>
+					<h3 class="text-center">{{boat.title.rendered}}</h3>
 				</router-link>
-				<div class="tths">
+				
+				<!-- <div class="tths">
 					<div class="tth" v-for="item in boat.acf.characteristic">
 						<img :src="item.ikonka" alt="">
 						<p class="black-txt">{{item.nazvanie}}</p>
 					</div>
-				</div>
+				</div> -->
 				<!-- <pre>{{boat.acf.gallereya}}</pre> -->
 				<div class="price-box">
 					<p>{{boat.acf.stoimost}} ₽/час</p>
 					<button class="order2" @click="showPop(boat.title.rendered)">Арендовать</button>
+				</div>
+				<div class="directions">
+					<span class="mdi mdi-map-marker-radius-outline"></span>
+					<p class="tour-link">
+						<router-link tag="a" :to="'/turi/' + tour.slug" v-for="tour in tours">{{tour.title.rendered}}, </router-link> 
+					</p>
 				</div>
 			</div>
 		</div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
 export default {
     props: {
         boat: {
@@ -40,6 +49,9 @@ export default {
             type: Object
         }
     },
+	computed: {
+		...mapState('goods', ['tours']),
+	},
     methods: {
         changeSlide(param){
             if(this.activeSlide == this.boat.acf.gallereya.length - 1 && param == 1){
@@ -143,7 +155,6 @@ export default {
 .boat-box{
 	background: #f7f7f7;
     margin-bottom: 30px;
-    min-height: 590px;
 }
 .boat-body{
 	padding:20px;
