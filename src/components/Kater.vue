@@ -155,7 +155,6 @@ import {mapState} from 'vuex'
 .boat-box{
 	background: #f7f7f7;
     margin-bottom: 30px;
-    min-height: 590px;
 }
 .boat-body{
 	padding: 0 20px 20px 20px;

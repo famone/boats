@@ -28,23 +28,75 @@
 	  						<div class="prevBtn" slot="button-prev"></div>
 							<div class="nextBtn" slot="button-next"></div>
 	  					</div>
-
-
 				</div>
 				<div class="col-lg-6">
+					<h2>Характеристики</h2>
+					<div class="row tths">
+						<div class="col-lg-4" v-for="item in getBoats(itemSlug).acf.characteristic">
+							<div class="box" >
+								<img :src="item.ikonka" alt="">
+								<p class="black-txt">{{item.nazvanie}}</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="box" >
+								<img src="../assets/img/nic1.svg" alt="">
+								<p class="black-txt">Аудиосистема</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="box" >
+								<img src="../assets/img/nic2.svg" alt="">
+								<p class="black-txt">Спасательные жилеты</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="box" >
+								<img src="../assets/img/nic3.svg" alt="">
+								<p class="black-txt">Холодильник</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="box" >
+								<img src="../assets/img/nic5.svg" alt="">
+								<p class="black-txt">Столик</p>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="box" >
+								<img src="../assets/img/nic4.svg" alt="">
+								<p class="black-txt">Пледы</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<p class="grey-txt" style="margin-bottom:0;">СТОИМОСТЬ АРЕНДЫ:</p>
+							<h3 style="margin-bottom:30px; margin-top:5px;">{{getBoats(itemSlug).acf.stoimost}} ₽/час</h3>
+						</div>
+						<div class="col-lg-6">
+							<button style="margin-top:0px;" class="order2" @click="showPop(getBoats(itemSlug).title.rendered)">Арендовать</button>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-lg-12">
+					<hr>
 					<h2 style="margin-bottom: 8px;">Подробнее о</h2>
 					<h3 style="margin-bottom: 25px;">{{getBoats(itemSlug).title.rendered}}</h3>
 					<div class="grey-txt" v-html="getBoats(itemSlug).content.rendered"></div>
+				</div>
+			</div>
+		</section>
 
-					<div class="tths">
-						<div class="box" v-for="item in getBoats(itemSlug).acf.characteristic">
-							<img :src="item.ikonka" alt="">
-							<p class="white-txt">{{item.nazvanie}}</p>
-						</div>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 style="margin-bottom: 0px;">Доступные туры</h2>
 					</div>
 				</div>
 			</div>
 		</section>
+		<appTours></appTours>
 		<appContUs></appContUs>
 	</div>
 </template>
@@ -54,10 +106,12 @@ import {mapGetters} from 'vuex'
 import {mapState} from 'vuex'
 import axios from 'axios'
 import Contactus from '../components/Contactus.vue'
+import Tours from '../components/Tours.vue'
 
 	export default{
 		components: {
-			'appContUs': Contactus
+			'appContUs': Contactus,
+			'appTours': Tours,
 		},
 		data(){
 			return{
@@ -67,7 +121,7 @@ import Contactus from '../components/Contactus.vue'
 			      spaceBetween: 0,
 			      draggable: true,
 			      autoplay: {
-			        delay: 1500,
+			        delay: 3000,
 			        disableOnInteraction: false,
 			      },
 			      pagination: {
@@ -86,7 +140,8 @@ import Contactus from '../components/Contactus.vue'
 			swiper(){
 	        	return this.$refs.mySwiper.$swiper
 	    	},
-			...mapGetters('goods', ['getBoats']),
+			...mapGetters('goods', ['getBoats', 'tours']),
+			...mapState('goods', ['tours']),
 		},
 		created(){
 			this.itemSlug = this.$route.params.id
@@ -101,6 +156,9 @@ import Contactus from '../components/Contactus.vue'
 </script>
 
 <style scoped>
+.directions a{
+	font-size: 16px;
+}
 #inner:before{
 	height: 100%;
 	width: 100%;
@@ -111,20 +169,9 @@ import Contactus from '../components/Contactus.vue'
 	background-color: rgba(0,0,0,0.4);
 
 }
-.tths{
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-wrap: wrap;
-	margin-top: 30px;
-}
 .tths .box{
-	padding:10px 20px;
-	background-color: #B7934D;
-	width: 45%;
-	height: 98px;
-	margin-right: 15px;
-	margin-bottom: 15px;
+	height: 80px;
+	margin-bottom:30px;
 }
 .box .white-txt{
 	font-size: 15px;
@@ -133,6 +180,7 @@ import Contactus from '../components/Contactus.vue'
 }
 .box img{
 	margin-bottom: 10px;
+	height: 30px;
 }
 .navigation{
 	display: flex;
