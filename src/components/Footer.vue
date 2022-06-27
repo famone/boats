@@ -11,7 +11,7 @@
 				<p class="white-txt"><a href="mailto:hello@generalboats.ru">hello@generalboats.ru</a></p>
 				<br>
 				<div class="social-links" style="margin-bottom: 20px;">
-					<!-- <a href="https://www.instagram.com/generalboats/" target="blank_"><i class="fa-solid fa-user"></i></a> -->
+					<a href="https://vk.com/generalboats" target="blank_"><i class="fa-brands fa-vk"></i></a>
 					<a href="https://wa.me/79119404444" target="blank_"><i class="fa-brands fa-whatsapp"></i></a>
 					<a href="viber://add?number=79119404444" target="blank_"><i class="fa-brands fa-viber"></i></a>
 					<a href="tg://resolve?domain=@admiral_master" target="blank_"><i class="fa-brands fa-telegram"></i></a>

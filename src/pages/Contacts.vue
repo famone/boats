@@ -32,7 +32,7 @@
 					<div class="col-lg-6 col-lg-offset-3">
 						<div class="cont-box text-center">
 							<h4>Vkontakte</h4>
-							<a href="https://www.instagram.com/generalboats/" target="blank_">
+							<a href="https://vk.com/generalboats" target="blank_">
 								<img src="../assets/img/vklogo.svg" class="inst"></a>
 						</div>
 					</div>

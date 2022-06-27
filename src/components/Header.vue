@@ -9,6 +9,7 @@
 					+7 911 940-44-44
 				</a>
 				<div class="social-links hidden-xs hidden-sm">
+					<a href="https://vk.com/generalboats" target="blank_"><i class="fa-brands fa-vk"></i></a>
 					<a href="https://wa.me/79119404444" target="blank_"><i class="fa-brands fa-whatsapp"></i></a>
 					<a href="viber://add?number=79119404444" target="blank_"><i class="fa-brands fa-viber"></i></a>
 					<a href="tg://resolve?domain=@admiral_master" target="blank_"><i class="fa-brands fa-telegram"></i></a>
@@ -47,6 +48,7 @@
 					+7 911 940-44-44
 				</a>
 				<div class="social-links" style="margin-top: 20px;">
+					<a href="https://vk.com/generalboats" target="blank_"><i class="fa-brands fa-vk"></i></a>
 					<a href="https://wa.me/79119404444" target="blank_"><i class="fa-brands fa-whatsapp"></i></a>
 					<a href="viber://add?number=79119404444" target="blank_"><i class="fa-brands fa-viber"></i></a>
 					<a href="tg://resolve?domain=@admiral_master" target="blank_"><i class="fa-brands fa-telegram"></i></a>
