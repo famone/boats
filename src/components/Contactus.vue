@@ -78,7 +78,7 @@ export default{
                 .then((response) => {
                     console.log(response);
                     this.errors = response.data;
-                    
+                    ym(89343131,'reachGoal','zayavka')
                 })
                 .catch((error) => {
                     this.errors = error.response.data

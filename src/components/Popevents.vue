@@ -77,6 +77,7 @@ import axios from 'axios'
 							your_boat: ''
 						}
                     }
+					ym(89343131,'reachGoal','zayavka')
                 })
                 .catch((error) => {
                     this.errors = error.response.data

@@ -91,6 +91,7 @@ import {mapGetters, mapState} from 'vuex'
                     console.log(res.data)
                     this.popReview = false
                     this.$store.dispatch('goods/loadReviews')
+                    ym(89343131,'reachGoal','zayavka')
                 })
             }
         },
